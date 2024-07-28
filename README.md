@@ -1,6 +1,8 @@
 # Utopia Slides Format
 
-Fully responsive slides using fluid typography and layouts with [Utopia CSS](https://utopia.fyi/).
+Fully responsive slides using fluid type scaling with [Utopia CSS](https://utopia.fyi/).
+
+In addition to fluid type scaling, utopia is an experiment in full-screen, fully responsive slides at all browser sizes on any device, including mobile.
 
 ## Using
 
