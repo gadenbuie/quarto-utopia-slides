@@ -27,6 +27,10 @@ $presentation-heading-font-weight: 700;
   }
 }
 
+.slides .slide {
+  overflow: auto;
+}
+
 .slides .slide,
 .slides #title-slide {
   --_slide-padding: var(--space-s);
