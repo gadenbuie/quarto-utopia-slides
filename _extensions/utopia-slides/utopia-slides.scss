@@ -1,0 +1,124 @@
+/*-- scss:defaults --*/
+/* See https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+$font-family-sans-serif: "Lato", Helvetica, sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+$presentation-heading-font: "Nunito Sans", $font-family-sans-serif;
+
+$presentation-h1-font-size: var(--step-5);
+$presentation-h2-font-size: var(--step-4);
+$presentation-h3-font-size: var(--step-3);
+$presentation-h4-font-size: var(--step-2);
+$presentation-font-size-root: var(--step-1);
+$presentation-heading-font-weight: 700;
+
+/*-- scss:rules --*/
+.slides #title-slide {
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal.reveal {
+  .slides .slide,
+  .slides #title-slide {
+    height: calc(100vh - 2 * var(--_slide-padding));
+    width: calc(100vw - 2 * var(--_slide-padding));
+  }
+}
+
+.slides .slide,
+.slides #title-slide {
+  --_slide-padding: var(--space-s);
+  padding: var(--_slide-padding);
+  flex-direction: column;
+}
+
+.slides .slide {
+  --_slide-padding: var(--space-s);
+  align-items: var(--slide-align-items, start);
+  justify-content: var(--slide-justify-content, start);
+
+  &.top {
+    --slide-align-items: start;
+  }
+  &.middle {
+    --slide-align-items: center;
+  }
+  &.bottom {
+    --slide-align-items: end;
+  }
+
+  &.left {
+    --slide-justify-content: start;
+  }
+  &.center {
+    --slide-justify-content: center;
+  }
+  &.right {
+    --slide-justify-content: end;
+  }
+
+  &.fullscreen {
+    --_slide-padding: 0;
+  }
+}
+
+.reveal .r-stretch {
+  max-width: 100%;
+}
+
+.slide-container {
+    max-width: 100%;
+}
+
+div.columns {
+  display: flex;
+  gap: initial
+}
+
+div.column {
+  display: block;
+  overflow-x: unset;
+  width: var(--width, 50%);
+}
+
+.reveal .slide {
+  font-family: var(--slide-main-font, var(--r-main-font));
+  font-size: var(--slide-main-font-size, var(--r-main-font-size));
+  color: var(--slide-color, var(--slide-main-color, var(--r-main-color)))
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  color: var(--slide-color, var(--slide-heading-color, var(--r-heading-color)));
+  // margin: var(--r-heading-margin);
+  // font-family: var(--r-heading-font);
+  // font-weight: var(--r-heading-font-weight);
+  // line-height: var(--r-heading-line-height);
+  // letter-spacing: var(--r-heading-letter-spacing);
+  // text-transform: var(--r-heading-text-transform);
+  // text-shadow: var(--r-heading-text-shadow);
+  // word-wrap: break-word;
+}
+
+.slide.has-dark-background {
+  --slide-main-color: #FFF;
+  --slide-heading-color: #FFF;
+}
+
+@media screen and (max-width: 576px) {
+  .slides .slide {
+    --_slide-padding: var(--space-xs);
+    overflow: auto;
+    justify-content: start;
+    align-items: start;
+  }
+
+  div.columns {
+    display: block;
+  }
+
+  div.columns {
+    --width: 100%;
+  }
+}
