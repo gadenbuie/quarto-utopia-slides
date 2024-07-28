@@ -10,9 +10,9 @@ contributes:
       view: scroll
       theme: 
         - default
-        - _extensions/utopia-slides/utopia-slides.scss
+        - utopia-slides.scss
       css: 
-        - _extensions/utopia-slides/utopia.css
+        - utopia.css
 
   revealjs-plugins:
     - name: RevealSlideContainer
