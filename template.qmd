@@ -21,6 +21,20 @@ editor:
 - [Bullet 1]{.code} `.code`
 - [Bullet 1]{.system-sans-serif} `.system-sans-serif`
 
+## Slide with code
+
+```{.r}
+library(ggplot2)
+
+foo <- function(spaz) {
+  bar
+}
+
+mtcars |> 
+  ggplot(aes(x = disp, y = mpg)) +
+  geom_point()
+```
+
 # Section slide {.middle}
 
 ## Slide light

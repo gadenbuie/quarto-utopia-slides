@@ -184,6 +184,17 @@ $presentation-heading-font-weight: 700;
   }
 }
 
+// Fixes for tachyons and pandoc code styles interactions
+code span {
+  &.bn { border-style: inherit; border-width: inherit } /* BaseN */
+  &.cf:before, &.cf:after { content: unset; display: inline; }
+  &.cf:after { clear: unset; }
+  &.cf { zoom: inherit; }
+  &.cn { clear: unset; }
+  &.dt { display: inline; }
+  &.fl { float: unset; }
+}
+
 @media screen and (max-width: 768px) {
   .slides .slide,
   .slides #title-slide {
