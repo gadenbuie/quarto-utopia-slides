@@ -95,13 +95,13 @@ $presentation-heading-font-weight: 700;
 
 .slides .slide,
 .slides #title-slide {
-  --_slide-padding: var(--space-s);
+  --_slide-padding: var(--space-m);
   padding: var(--_slide-padding);
   flex-direction: column;
 }
 
 .slides .slide {
-  --_slide-padding: var(--space-s);
+  --_slide-padding: var(--space-m);
   &.left {
     align-items: start;
   }
@@ -184,9 +184,20 @@ $presentation-heading-font-weight: 700;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .slides .slide,
+  .slides #title-slide {
+    --_slide-padding: var(--space-s);
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .slides .slide {
+  .slides .slide,
+  .slides #title-slide {
     --_slide-padding: var(--space-xs);
+  }
+
+  .slides .slide {
     overflow: auto;
     justify-content: start;
     align-items: start;
