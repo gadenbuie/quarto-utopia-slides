@@ -133,6 +133,48 @@ $presentation-heading-font-weight: 700;
   margin-block: var(--step-1);
 }
 
+@each $val in ("-2", "-1", "0", "1", "2", "3", "4", "5") {
+  .fs-step-#{$val} {
+    font-size: var(--step-#{$val});
+  }
+}
+
+@each $val in ("3xs", "2xs", "xs", "s", "m", "l", "xl", "2xl", "3xl") {
+  .gap-#{$val} {
+    gap: var(--space-#{$val});
+  }
+  .m-block-#{$val} {
+    margin-block: var(--space-#{$val});
+  }
+  .m-inline-#{$val} {
+    margin-inline: var(--space-#{$val});
+  }
+  .m-block-start-#{$val} {
+    margin-block-start: var(--space-#{$val});
+  }
+  .m-block-end-#{$val} {
+    margin-block-end: var(--space-#{$val});
+  }
+  .p-block-#{$val} {
+    padding-block: var(--space-#{$val});
+  }
+  .p-inline-#{$val} {
+    padding-inline: var(--space-#{$val});
+  }
+  .p-block-start-#{$val} {
+    padding-block-start: var(--space-#{$val});
+  }
+  .p-block-end-#{$val} {
+    padding-block-end: var(--space-#{$val});
+  }
+  .p-inline-start-#{$val} {
+    padding-inline-start: var(--space-#{$val});
+  }
+  .p-inline-end-#{$val} {
+    padding-inline-end: var(--space-#{$val});
+  }
+}
+
 @media screen and (max-width: 576px) {
   .slides .slide {
     --_slide-padding: var(--space-xs);
