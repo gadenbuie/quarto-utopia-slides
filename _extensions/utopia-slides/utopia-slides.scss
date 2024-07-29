@@ -129,6 +129,18 @@ $presentation-heading-font-weight: 700;
 
   &.fullscreen {
     --_slide-padding: 0;
+    
+    .shinylive-wrapper {
+      margin: 0;
+
+      .shinylive-editor {
+        grid-template-rows: 2.5rem 1fr;
+      }
+
+      .shinylive-container {
+        max-height: 100vh;
+      }
+    }
   }
 }
 
