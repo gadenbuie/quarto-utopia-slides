@@ -13,6 +13,7 @@ contributes:
         - utopia-slides.scss
       css: 
         - utopia.css
+        - tachyons.css
 
   revealjs-plugins:
     - name: RevealSlideContainer
