@@ -21,6 +21,8 @@ editor:
 - [Bullet 1]{.code} `.code`
 - [Bullet 1]{.system-sans-serif} `.system-sans-serif`
 
+# Section slide {.middle}
+
 ## Slide light
 
 This has `code` with a light background.

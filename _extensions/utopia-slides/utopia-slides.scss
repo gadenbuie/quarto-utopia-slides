@@ -6,10 +6,15 @@ $font-family-sans-serif: "Lato", Helvetica, sans-serif !default;
 $font-family-monospace: "Source Code Pro", monospace !default;
 $presentation-heading-font: "Nunito Sans", $font-family-sans-serif !default;
 
+$title-slide-color: #FFF !default;
+$title-slide-background-color: #9A4665FF !default;
+
 :root {
   --font-sans-serif: #{$font-family-sans-serif};
   --font-monospace: #{$font-family-monospace};
   --font-heading: #{$presentation-heading-font};
+  --title-slide-color: #{$title-slide-color};
+  --title-slide-background-color: #{$title-slide-background-color};
 }
 
 .font-heading {
@@ -58,6 +63,11 @@ $presentation-heading-font-weight: 700;
 .slides #title-slide {
   justify-content: center;
   align-items: center;
+}
+
+.title-slide {
+  background-color: var(--title-slide-background-color);
+  --slide-color: var(--title-slide-color);
 }
 
 .reveal.reveal {
