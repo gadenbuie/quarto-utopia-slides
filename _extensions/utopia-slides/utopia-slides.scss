@@ -59,6 +59,15 @@ $presentation-heading-font-weight: 700;
   --slide-heading-color: #FFF;
 }
 
+.reveal img, .reveal video, .reveal iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.reveal div.sourceCode {
+  margin-bottom: 1rem !important;
+}
+
 /*-- custom styles --*/
 .slides #title-slide {
   justify-content: center;
