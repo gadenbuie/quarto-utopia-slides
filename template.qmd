@@ -16,10 +16,10 @@ editor:
 
 ## Default slide
 
-- Bullet 1
-- Bullet 1
-- Bullet 1
-- Bullet 1
+- [Bullet 1]{.sans-serif} `.sans-serif`
+- [Bullet 1]{.font-heading} `.font-heading`
+- [Bullet 1]{.code} `.code`
+- [Bullet 1]{.system-sans-serif} `.system-sans-serif`
 
 ## Slide light
 

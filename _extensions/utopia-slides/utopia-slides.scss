@@ -2,9 +2,19 @@
 /* See https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-$font-family-sans-serif: "Lato", Helvetica, sans-serif;
-$font-family-monospace: "Source Code Pro", monospace;
-$presentation-heading-font: "Nunito Sans", $font-family-sans-serif;
+$font-family-sans-serif: "Lato", Helvetica, sans-serif !default;
+$font-family-monospace: "Source Code Pro", monospace !default;
+$presentation-heading-font: "Nunito Sans", $font-family-sans-serif !default;
+
+:root {
+  --font-sans-serif: #{$font-family-sans-serif};
+  --font-monospace: #{$font-family-monospace};
+  --font-heading: #{$presentation-heading-font};
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
 
 $presentation-h1-font-size: var(--step-5);
 $presentation-h2-font-size: var(--step-4);
@@ -106,6 +116,11 @@ $presentation-heading-font-weight: 700;
 
 .slide-container {
     max-width: 100%;
+}
+
+.slide p {
+  text-wrap: pretty;
+  margin-block: var(--step-1);
 }
 
 @media screen and (max-width: 576px) {
