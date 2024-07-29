@@ -53,8 +53,10 @@ $presentation-heading-font-weight: 700;
 .reveal.reveal {
   .slides .slide,
   .slides #title-slide {
-    height: calc(100vh - 2 * var(--_slide-padding));
-    width: calc(100vw - 2 * var(--_slide-padding));
+    // height: calc(100vh - 2 * var(--_slide-padding));
+    // width: calc(100vw - 2 * var(--_slide-padding));
+    height: 100%;
+    width: 100%;
   }
 }
 
