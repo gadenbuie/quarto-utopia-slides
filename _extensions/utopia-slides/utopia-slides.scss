@@ -129,6 +129,10 @@ $presentation-heading-font-weight: 700;
 
   &.fullscreen {
     --_slide-padding: 0;
+
+    .sourceCode:has(> .shinylive-wapper) {
+      margin: 0;
+    }
     
     .shinylive-wrapper {
       margin: 0;
@@ -143,6 +147,28 @@ $presentation-heading-font-weight: 700;
     }
   }
 }
+
+:root {
+  --sl-fullscreen-scale: 2;
+}
+
+.slide.fullscreen{
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  .shinylive-wrapper {
+    width: calc(100% / var(--sl-fullscreen-scale));
+    height: calc(100% / var(--sl-fullscreen-scale));
+    transform: scale(var(--sl-fullscreen-scale));
+    transform-origin: top left;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
 
 @each $val in ("left", "center", "right") {
   .text-#{$val} {
